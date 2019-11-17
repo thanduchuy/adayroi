@@ -1,0 +1,34 @@
+<div
+  class="product d-flex flex-column"
+  (mouseover)="changeImage()"
+  (mouseout)="resetImage()"
+>
+  <div
+    class="product_image"
+    [ngStyle]="{ 'background-image': 'url(' + imgRoot + ')' }"
+  ></div>
+  <p class="product_name">{{ name }}</p>
+  <div class="price">
+    <span class="price_new">{{ price_new }}đ</span>
+    <span class="price_old">{{ price_old }}đ</span>
+    <span class="discount">-{{ discount }}%</span>
+  </div>
+  <div class="rate">
+    <i class="fas fa-star"></i><i class="fas fa-star"></i
+    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+    ><i class="fas fa-star"></i>
+  </div>
+  <div class="refund d-flex">
+    <div class="vinid d-flex align-items-center justify-content-center ">
+      <img src="/assets/img/download.jpg" alt="" />
+      <span>Hoàn {{ vinid }}đ</span>
+    </div>
+    <i class="fas fa-gifts visible"></i>
+  </div>
+  <div class="endow d-flex">
+    <i class="fas fa-gifts"></i>
+    <span class="endow-iten">Ưu đãi 5%</span>
+    <span class="endow-iten">Ưu đãi 6%</span>
+  </div>
+  <button class="add-cart">Thêm vào giỏ hàng</button>
+</div>
